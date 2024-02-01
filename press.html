@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="press-css.css">
+    <title>Project press</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#"><span style="color: #f9532d;">MY</span> Projects</a>
+            </div>
+            <input type="checkbox" id="click">
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+    <section class="projects" id="projects">
+        <div class="project-container">
+            <div class="project-list">
+                <div class="project-box">
+                    <img src="img/press.png">
+                    <div class="project-details">
+                        <h2>Front End Web Development project <span style="color:gray; font-size:15px;">(2022)</span></h2>
+                        <p>The project aims to create an information site (PressNetwork)
+                            which allows everyone to consult the latest news.</p>
+                    </div>
+                </div>
+
+                <div class="project-box" style="font-size: 1.5rem;">
+                    <div></div>
+                    <p><span style="color: #f9532d;">NAME :</span> Press network.</p><br>
+                    <p><span style="color: #f9532d;">Project theme:</span> news site.</p><br>
+                    <p><span style="color: #f9532d;">Tool :</span> HTML/CSS.</p><br>
+                    <p><span style="color: #f9532d;">Directed by :</span> ABAICH Mohamed.</p><br>
+                    <p><span style="color: #f9532d;">About :</span> The project aims to create an information site (PressNetwork) which allows everyone to consult the
+                        latest news.</p>
+                    <span style="color:gray; font-size:15px;">(date created : 30-06-2022)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contente">
+        <div class="project-exemple"> 
+            <h1><span style="color: #f9532d;">Press</span>Network</h1>
+            <div class="video-project">
+                <video src="videopresss/videopresss.mp4" controls autoplay loop muted ></video>
+                <div class="aa1">
+                    <p>This is the video featured on the <span style="color: #f9532d;">PRESS</span> website with its distinctive style and graphic elements.</p>
+                </div>
+            </div>
+            <div class="image-project">
+                <div class="first">
+                    <p>1- The website is composed of numerous important sections and domains.</p>
+                    <img src="imagepress/yyy.png" alt="Image 1">
+                </div>
+                <div class="first">
+                    <p>2- Example of a domain.</p>
+                    <img src="imagepress/tt.png" alt="Image 2">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>

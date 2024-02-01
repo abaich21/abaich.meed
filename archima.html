@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="archima-css.css">
+    <title>Project archima</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#"><span style="color: #f9532d;">MY</span> Projects</a>
+            </div>
+            <input type="checkbox" id="click">
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+    <section class="projects" id="projects">
+        <div class="project-container">
+            <div class="project-list">
+                <div class="project-box">
+                    <img src="img/archima.png">
+                    <div class="project-details">
+                        <h2>Website for advertisements of architect service <span style="color:gray; font-size:15px;">(2023)</span></h2>
+                        <br><p>The online platform dedicated to architect services provides an efficient 
+                            and convenient way to facilitate the connection between architects and 
+                            potential clients.</p>
+                    </div>
+                </div>
+
+                <div class="project-box" style="font-size: 1.4rem;">
+                    <div></div>
+                    <p><span style="color: #f9532d;">NAME :</span> Archima.</p><br>
+                    <p><span style="color: #f9532d;">Project theme:</span> Engage architects..</p><br>
+                    <p><span style="color: #f9532d;">Tools:</span> HTML /CSS /PHP /MySQL /JS /Bootstrap /Angular.</p><br>
+                    <p><span style="color: #f9532d;">Directed by :</span> ABAICH Mohamed/SGHIAR abdlah/BEN ABBOU yasser.</p><br>
+                    <p><span style="color: #f9532d;">About :</span> The website for architects' service listings can provide
+                        an efficient and convenient platform for architects and potential clients to connect,
+                        thereby enhancing the visibility of the business, attracting new clients,
+                        and improving communication with potential clients.</p>
+                    <span style="color:gray; font-size:15px;">(date created : 21-06-2023)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contente">
+        <div class="project-exemple"> 
+            <h1><span style="color: #f9532d;">ARCHI</span>MA</h1>
+            <!-- <div class="video-project">
+                <video src="videopresss/videopresss.mp4" controls autoplay loop muted ></video>
+                <div class="aa1">
+                    <p>This is the video featured on the <span style="color: #f9532d;">PRESS</span> website with its distinctive style and graphic elements.</p>
+                </div>
+            </div> -->
+            
+
+            <div class="image-project">
+                <div class="home-project">
+                    <p>The system encompasses three main actions: 
+                        searching for an architect based on the city, 
+                        the second action involves architect registration, 
+                        and the third action is dedicated to connecting to the architect's account.</p>
+                    <img src="imagearchima/section1.png" alt="Image 1">
+                </div> 
+            </div>
+            <div class="image-project">
+                <div class="first">
+                    <p>1- It displays all architects who have created their profiles.</p>
+                    <img src="imagearchima/section2.png" alt="Image 2">
+                </div>
+                <div class="first">
+                    <p>2- It presents the results of the architecture search in Tetouan.</p>
+                    <img src="imagearchima/chercher.png" alt="Image 2">
+                </div>
+            </div>
+            <div class="image-project">
+                <div class="first">
+                    <p>3- For a selected architect, it provides comprehensive information for contacting them</p>
+                    <img src="imagearchima/profil.png" alt="Image 1">
+                </div>
+                <div class="first">
+                    <p>4- It showcases the architect registration interface.</p>
+                    <br><img src="imagearchima/incrir.png" alt="Image 2">
+                </div>
+            </div>
+            <div class="image-project">
+                <div class="first">
+                    <p>5- It presents the authentication page for architects.</p>
+                    <br><img src="imagearchima/login.png" alt="Image 1">
+                </div>
+                <div class="first">
+                    <p>6- It exhibits the architect space (profile) where they can modify both their public and personal information</p>
+                    <img src="imagearchima/monprofil.png" alt="Image 2">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>

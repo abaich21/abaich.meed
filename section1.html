@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="section1-css.css">
+    <title>Project Section1</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#"><span style="color: #f9532d;">MY</span> Projects</a>
+            </div>
+            <input type="checkbox" id="click">
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+    <section class="projects" id="projects">
+        <div class="project-container">
+            <div class="project-list">
+                <div class="project-box">
+                    <img src="img/section1.png">
+                    <div class="project-details">
+                        <h2>Professional Front End Web Development project  <span style="color:gray; font-size:15px;">(2022)</span></h2>
+                        <p>A website showcasing the services and activities of the company: Security Company Section 1.</p>
+                    </div>
+                </div>
+
+                <div class="project-box" style="font-size: 1.5rem;">
+                    <div></div>
+                    <p><span style="color: #f9532d;">NAME :</span> Section1.</p><br>
+                    <p><span style="color: #f9532d;">Project theme:</span> Professional site.</p><br>
+                    <p><span style="color: #f9532d;">Tool :</span> HTML/CSS/JS/UML.</p><br>
+                    <p><span style="color: #f9532d;">Directed by :</span> ABAICH Mohamed.</p><br>
+                    <p><span style="color: #f9532d;">About :</span> The project aims to create an information site (PressNetwork) which allows everyone to consult the
+                        latest news.</p>
+                    <span style="color:gray; font-size:15px;">(date created : 28-08-2022)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contente">
+        <div class="project-exemple"> 
+            <h1><span style="color: #f9532d;">Section</span>1</h1>
+            <!-- <div class="video-project">
+                <video src="videopresss/videopresss.mp4" controls autoplay loop muted ></video>
+                <div class="aa1">
+                    <p>This is the video featured on the <span style="color: #f9532d;">PRESS</span> website with its distinctive style and graphic elements.</p>
+                </div>
+            </div> -->
+            <div class="image-project">
+                <div class="first">
+                    <p>1- First page featuring a responsive navigation button.</p>
+                    <img src="imagesection1/11.png" alt="Image 1">
+                </div>
+                <div class="first">
+                    <p>2- Company introduction.</p>
+                    <img src="imagesection1/22.png" alt="Image 2">
+                </div>
+            </div>
+            <div class="image-project">
+                <div class="first">
+                    <p>3- Services provided by the company.</p>
+                    <img src="imagesection1/33.png" alt="Image 3">
+                </div>
+                <div class="first">
+                    <p>4- Photos of the company's staff.</p>
+                    <img src="imagesection1/44.png" alt="Image 4">
+                </div>
+            </div>
+            <div class="image-project">
+                <div class="first">
+                    <p>5- Tools utilized by the company.</p>
+                    <img src="imagesection1/55.png" alt="Image 5">
+                </div>
+                <div class="first">
+                    <p>6- Footer containing the contact information for the company.</p>
+                    <img src="imagesection1/66.png" alt="Image 6">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>

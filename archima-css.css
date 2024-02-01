@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --primary-color: #f9532d;
+    --primary-dark: rgb(28, 21, 44);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: #D3D3D3;
+    height: 100vh;
+    color: #000;
+}
+
+
+/* Genral */
+.container {
+    padding: 0 8.4rem;
+}
+
+.img-w {
+    width: 100%;
+    height: auto;
+}
+
+/* Nav */
+header {
+    box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+    background: #D3D3D3;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    opacity: 0;
+    animation: leftSideAni 1s ease forwards;
+}
+
+.logo a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    gap: .6rem;
+    list-style-type: none;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+li a {
+    display: inline-block;
+    padding: .3rem 1rem;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: .7px;
+    border-radius: 36px;
+    line-height: 2;
+    transition: .3s;
+    opacity: 0;
+    animation: navani .3s ease forwards;
+    animation-delay: calc(.15s * var(--navAni));
+}
+
+li a.active,
+li a:hover {
+    color: var(--primary-color);
+}
+
+#click {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.mode i {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    opacity: 0;
+    animation: rightSideAni 1.5s ease forwards;
+}
+/*---------------project-------------------*/
+#projects {
+    padding: 50px 0;
+    padding-bottom: 0;
+}
+
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-header h1 {
+    font-size: 36px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-box {
+    width: calc(45% - 20px); /* Adjusted width to accommodate margin */
+    margin: 0 10px 30px 10px; /* Added margin for space between project boxes */
+    background-color: #BEBEBE;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box; /* Added box-sizing for accurate width calculations */
+}
+
+.dark-mode .project-box {
+    background-color: rgb(73, 57, 87);
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-details h2 {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.project-details p {
+    color: #666;
+}
+
+.dark-mode .project-details p {
+    color: rgb(189, 144, 231);
+}
+
+/*-------dark mode---------*/
+
+.dark-mode {
+    background-color: var(--primary-dark);
+    color: #ffffff;
+}
+
+.mode input {
+    display: none;
+}
+
+.dark-mode .logo a{
+    color: #fff;
+}
+
+.dark-mode header {
+    box-shadow: 0 4px 17px rgb(80 80 80 / 31%);
+    background: var(--primary-dark);
+}
+/*---------------------detail----------------------------------*/
+.project-exemple {
+
+    width: 100%;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 0;
+    background-color: #BEBEBE;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.project-exemple h1 {
+    text-align: center;
+    margin: 20px 0; /* Ajustement de la marge */
+    font-size: 2rem;
+}
+
+.contente {
+    padding: 2rem 0; /* Utilisation d'unités relatives pour le padding */
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+
+
+}
+.video-project video{
+    max-width: 100%;
+    border-radius: 8px;
+    border: #000 solid 2px;
+}
+.video-project p {
+    font-size: 20px;
+    padding-top: 20px;
+}
+.aa1{
+    border-bottom:solid 2px #f9532d ;
+    padding-bottom: 2rem;
+}
+/*--------home-project------------*/
+.home-project{
+    margin: 10px;
+}
+.home-project p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+/* Style pour la section d'images */
+.image-project {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    margin: 0 auto; /* Centre la section horizontalement */
+    max-width: 100%; /* Ajustez la largeur maximale selon vos besoins */
+}
+
+.image-project .first {
+    margin: 10px;
+}
+
+.image-project img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: #000 solid 2px;
+    margin-top: 20px;
+}
+
+.first p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.dark-mode .project-exemple {
+    background-color: rgb(73, 57, 87);
+}
+@media screen and (max-width: 768px) {
+    .project-exemple {
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
+    .image-project {
+        flex-wrap: wrap; /* Permettre le retour à la ligne des éléments si nécessaire */
+    }
+    .container{
+        margin: 0%;
+    }
+    .first p {
+        border-top:solid 2px #f9532d ;
+        padding-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* --------------------------Animation------------------------- */
+@keyframes leftSideAni {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes navani {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightSideAni {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes topSideAni {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 4.4rem;
+    }
+
+    .main h3 {
+        color: #000;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 1.6rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body {
+        height: auto;
+    }
+
+    header {
+        height: auto;
+    }
+
+    ul {
+        background: #fff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 3.4rem;
+        left: -100%;
+        z-index: 111111;
+    }
+
+    .menu {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    #click:checked~ul {
+        left: 0%;
+        transition: all 0.3s ease;
+    }
+    .dark-mode .menu {
+        color: var(--primary-color);
+    }
+
+    .dark-mode ul {
+        background: var(--primary-dark);
+    }
+
+    .mode {
+        position: absolute;
+        right: 4rem;
+    }
+    .images {
+        width: 100%;
+        margin: auto;
+    }
+
+    .main {
+        margin-top: 2rem;
+    }
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .project-box {
+        width: 100%;
+        margin: 15px;
+    }
+}
+
