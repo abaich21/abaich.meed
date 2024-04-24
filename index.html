@@ -13,6 +13,20 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/> 
     <title>ABAICH Mohamed</title>
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sélectionnez tous les éléments de la liste
+        const menuItems = document.querySelectorAll('ul li a');
+
+        // Ajoutez un gestionnaire d'événements à chaque élément de la liste
+        menuItems.forEach(function (menuItem) {
+            menuItem.addEventListener('click', function () {
+                // Décochez la case à cocher correspondant au bouton de menu
+                document.getElementById('click').checked = false;
+            });
+        });
+    });
+</script>
 
 <body>
     <header class="container">
@@ -123,7 +137,7 @@
             
                  <div class="cart">
                     <i class="fa-solid fa-crop"></i>
-                    <h5>Photoshop</h5>
+                    <h5>Design</h5>
                     <div class="par">
                         <p>A graphic designer is a professional within 
                             the graphic design and graphic arts industry

@@ -19,15 +19,7 @@ body {
     color: #000;
 }
 
-/* Genral */
-.container {
-    padding: 0 8.4rem;
-}
 
-.img-w {
-    width: 100%;
-    height: auto;
-}
 
 /* Nav */
 header {
@@ -161,11 +153,19 @@ li a:hover {
     box-shadow: 0 0 20px var(--primary-color);
     transition: all .3s ease-in-out;
 }
+/* Genral */
+.container {
+    padding: 0 8.4rem;
+}
 
+.img-w {
+    width: 100%;
+    height: auto;
+}
 
 .images {
     border-radius: 10px;
-    width: 450px;
+    width: 75%;
 }
 .images {
     background: linear-gradient(145deg, #BEBEBE, #BEBEBE);
